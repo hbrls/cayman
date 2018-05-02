@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
-  s.name          = 'jekyll-theme-cayman'
-  s.version       = '0.1.1'
-  s.license       = 'CC0-1.0'
-  s.authors       = ['Jason Long', 'GitHub, Inc.']
-  s.email         = ['opensource+jekyll-theme-cayman@github.com']
-  s.homepage      = 'https://github.com/pages-themes/cayman'
-  s.summary       = 'Cayman is a Jekyll theme for GitHub Pages'
+  s.name          = 'jekyll-theme-gitbook'
+  s.version       = '0.0.1'
+  s.license       = 'Apache-2.0'
+  s.authors       = ['hbrls']
+  s.email         = ['shuaizhexu@gmail.com']
+  s.homepage      = 'https://github.com/hbrls/jekyll-gitbook'
+  s.summary       = 'Gitbook is a Jekyll theme for GitHub Pages'
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|
     f.match(%r{^((_includes|_layouts|_sass|assets)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
