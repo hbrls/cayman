@@ -1,0 +1,19 @@
+{% assign _book = site.data.books[page.book] %}
+<nav role="navigation">
+  <ul class="summary">
+    <li>
+      <a href="{{ site.data.books.prefix }}/{{ page.book }}" target="_blank" class="jgb-book-nav-title">
+      {{ _book.title }} <small>{{ _book.description }}</small>
+      </a>
+    </li>
+    <li class="divider"></li>
+    {% assign sorted_pages = site.pages | where: "book", page.book | sort: "name" %}
+    {% for spg in sorted_pages %}
+    <li class="chapter {% if spg.book == page.book and spg.name == page.name %}active{% endif %}" data-level="1.1" data-path="./"><a href="{{ spg.url }}">{{ spg.title }}</a></li>
+    {% endfor %}
+    <li class="divider"></li>
+    <li>
+      <a href="https://github.com/hbrls/jekyll-gitbook" target="blank" class="gitbook-link">本書使用 GitBook 主題</a>
+    </li>
+  </ul>
+</nav>

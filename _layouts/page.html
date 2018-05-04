@@ -27,27 +27,7 @@
         <input type="text" placeholder="輸入並搜尋">
       </div>
 
-      <nav role="navigation">
-        <ul class="summary">
-          <li>
-            <a href="https://www.gitbook.com/book/hbrls/t2" target="_blank" class="custom-link">{{ site.title | default: site.github.repository_name }}</a>
-          </li>
-          <li>
-            <a href="https://www.gitbook.com/book/hbrls/t2" target="_blank" class="custom-link">{{ site.description | default: site.github.project_tagline }}</a>
-          </li>
-          <li class="divider"></li>
-          <li class="chapter active" data-level="1.1" data-path="./">
-            <a href="./">Introduction</a>
-          </li>
-          <li class="chapter " data-level="1.2" data-path="rpi3.html">
-            <a href="rpi3.html">2016 Raspberry Pi Model 3 B</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="https://github.com/hbrls/jekyll-gitbook" target="blank" class="gitbook-link">本書使用 GitBook 主題</a>
-          </li>
-        </ul>
-      </nav>
+      {% include book_nav.html %}
     </div>
 
     <div class="book-body">
@@ -66,6 +46,8 @@
                 <section class="normal markdown-section">
                   {{ content }}
                 </section>
+
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
               </div>
             <div class="search-results">
               <div class="has-results">

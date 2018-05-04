@@ -1,0 +1,4 @@
+prefix: '/blog'
+example:
+  title: Example
+  description: Description Description
