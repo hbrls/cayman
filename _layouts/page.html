@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <div class="book without-animation with-summary font-size-2 font-family-1">
+    <div class="book with-summary font-size-2 font-family-1">
 
     <div class="book-summary">
       <div id="book-search-input" role="search">
@@ -33,6 +33,7 @@
     <div class="book-body">
       <div class="body-inner">
         <div class="book-header" role="navigation">
+          <a class="btn pull-left js-toolbar-action" aria-label="" href="#"><i class="fa fa-align-justify"></i></a>
           <div style="display: none">TODO: share icons</div>
           <h1>
             <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -47,7 +48,7 @@
                   {{ content }}
                 </section>
 
-                <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+                <p><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></p>
               </div>
             <div class="search-results">
               <div class="has-results">
@@ -75,11 +76,23 @@
     });
   </script> -->
 </div>
+  <script src="/assets/js/gitbook.js"></script>
+  <script src="/assets/js/theme.js"></script>
+  <script>
+  $(function () {
+    function isMobile() {
+      return $(document).width() <= 600
+    }
+    if (isMobile()) {
+      $('.book').removeClass('with-summary');
+    }
+    $('.js-toolbar-action').on('click', function () {
+      $('.book').toggleClass('with-summary');
+    });
+  })
+  </script>
 
-
-  <!-- <script src="gitbook/gitbook.js"></script>
-  <script src="gitbook/theme.js"></script>
-
+  <!--
   TODO: comment
 
 
